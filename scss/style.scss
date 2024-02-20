@@ -1,0 +1,43 @@
+@use "sass:math";
+// Шрифти
+@import "_fonts.scss";
+// Обнулення стилів
+@import "_reset.scss";
+// Функції
+@import "_functions.scss";
+// Міксіни
+@import "_mixins.scss";
+// Змінні
+@import "_variables.scss";
+// Загальні стилі
+//@import "_common-btn.scss";
+//@import "_common-block-title.scss";
+// Стилі секцій
+@import "_header.scss";
+@import "_main.scss";
+@import "_hero.scss";
+@import "footer.scss";
+// Додаткові секції
+//@import "_modal.scss";
+//@import "_pageUp.scss";
+
+//body {
+//font-family: "Poppins", sans-serif;
+//font-size: toRem(14);
+//font-weight: 500;
+//}
+.wrapper {
+  overflow: clip; /* //позволяет работать с position: sticky; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+[class*="__container"] {
+  //max-width: toRem();
+  margin: 0 auto;
+  padding: 0 toRem(15);
+  box-sizing: content-box;
+}
